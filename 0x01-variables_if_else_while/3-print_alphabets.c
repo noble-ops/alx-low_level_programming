@@ -7,47 +7,19 @@
  */
 int main(void)
 {
-	int c;
+	int last_char = 122;
+	int alpha;
 
-	for (c=97;c<=122;c++)
-    {
+	for (alpha = 97; alpha <= last_char; alpha++)
+	{
+		putchar(alpha);
 
-        putchar(c);
-    }
-    printf("\n");
-
-for (c=65;c<=90;c++)
-    {
-
-        putchar(c);
-    }
-    return(0);
-
-}
-#include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0 (Success)
- */
-int main(void)
-{
-	int c;
-
-	for (c=97;c<=122;c++)
-    {
-
-        putchar(c);
-    }
-    
-
-for (c=65;c<=90;c++)
-    {
-
-        putchar(c);
-    }
-   printf("\n");
-    return(0);
-
+		if (alpha == 122)
+		{
+			alpha = 64;
+			last_char = 90;
+		}
+	}
+	printf("\n");
+	return (0);
 }
